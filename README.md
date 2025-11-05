@@ -83,23 +83,3 @@ App will open at: http://localhost:3000
 
 Once both servers are active, the InfoHub SPA will automatically connect to your backend and display live data.
 
-InfoHub-Challenge/
-│
-├── client/                     # React Frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── CurrencyConverter.js
-│   │   │   ├── CurrencyConverter.css
-│   │   │   ├── WeatherModule.js
-│   │   │   ├── WeatherModule.css
-│   │   │   ├── QuoteGenerator.js
-│   │   │   └── QuoteGenerator.css
-│   │   ├── App.js              # Main layout & tab navigation
-│   │   ├── App.css             # Global styles
-│   │   └── index.js
-│   └── package.json            # Includes proxy config for backend
-│
-└── server/                     # Node/Express Backend
-    ├── .env                    # API keys (ignored in Git)
-    ├── server.js               # Express routes and logic
-    └── package.json
