@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 💡 InfoHub: Single-Page Utility Center
 
 This project implements the ByteXL Coding Challenge, creating a full-stack Single-Page Application (SPA) that unifies three common everyday utilities into a single interface.
@@ -100,3 +101,6 @@ InfoHub-Challenge/
     ├── .env                     (API Keys go here!)
     ├── server.js                (Main Express server logic)
     └── package.json
+=======
+
+>>>>>>> a93b156d7d891d093ed387ec417943100d04bd61
