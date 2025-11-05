@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------------ */
+/* --- Quote Generator Styles (Specific to QuoteGenerator.js) --- */
+/* ------------------------------------------------------------------ */
+
+/* Global Variables (Reference: Assume these are set in a higher level CSS or the CustomStyles component)
+:root {
+    --color-text-light: #ffffff;
+    --color-accent: #ff4081; 
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+*/
+
+.quote-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fce4ec; /* Light Pink background */
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+    color: #880e4f;
+    width: 100%;
+}
+
+.quote-card h2 {
+    color: #ad1457;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Quote Text Area */
+.quote-text {
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    min-height: 80px; /* Prevents major layout shifts when quote loads */
+    padding: 0 10px;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4a148c; /* Deep Purple accent */
+}
+
+/* Get New Quote Button */
+.quote-button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: var(--color-accent, #ff4081); 
+    color: var(--color-text-light, #ffffff);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.quote-button:hover:not(:disabled) {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 64, 129, 0.5);
+}
+
+.quote-button:disabled {
+    background-color: #f48fb1;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Loading Message & Error Box (Thematic Overrides) */
+.loading-message {
+    font-size: 1.2rem;
+    color: #ad1457; /* Dark pink for quote theme */
+    padding: 20px;
+}
+
+.error-box {
+    background-color: #f8bbd0; /* Lightest pink */
+    border: 1px solid #ad1457;
+    color: #880e4f;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 20px;
+    }
+    .quote-text {
+        font-size: 1.2rem;
+        min-height: 60px;
+    }
+}

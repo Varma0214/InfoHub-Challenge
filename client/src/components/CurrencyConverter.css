@@ -1,0 +1,140 @@
+/* ------------------------------------------------------------------ */
+/* --- Currency Converter Styles (Specific to CurrencyConverter.js) --- */
+/* ------------------------------------------------------------------ */
+
+/* Global Variables (Reference: Assume these are set in a higher level CSS or the CustomStyles component)
+:root {
+    --color-text-light: #ffffff;
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* The main container for the module */
+.converter-card {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #e8f5e9; /* Light Green Background */
+    color: #1b5e20;
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+    width: 100%;
+}
+
+.converter-card h2 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Container for the input field and button */
+.converter-input-group {
+    display: flex;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    align-items: stretch; /* Ensure input and button are same height */
+}
+
+/* Style for the amount input field */
+.converter-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #a5d6a7;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.converter-input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Style for the "Convert" button */
+.converter-button {
+    padding: 10px 25px;
+    background-color: #4caf50; /* Green */
+    color: var(--color-text-light, #ffffff);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.2s;
+    /* Bubble effect on press */
+    box-shadow: 0 4px #2e7d32;
+}
+
+.converter-button:hover:not(:disabled) {
+    background-color: #388e3c;
+    box-shadow: 0 2px #1b5e20;
+    transform: translateY(2px);
+}
+
+.converter-button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Layout for the conversion results */
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 450px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+/* Individual result box (USD/EUR) */
+.result-box {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #c8e6c9; /* Lighter Green */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.result-box p:first-child {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1b5e20;
+    margin-bottom: 5px;
+}
+
+.result-box p:last-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #388e3c;
+}
+
+/* General styles for error/info boxes (reused from App styles) */
+.error-box {
+    background-color: #ffebee; /* Red 50 */
+    border: 1px solid #e57373; /* Red 300 */
+    color: #c62828; /* Red 800 */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 600px) {
+    .converter-card {
+        padding: 20px;
+    }
+    .converter-input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .converter-button {
+        width: 100%;
+    }
+    .results-grid {
+        grid-template-columns: 1fr; /* Stack results vertically on small screens */
+    }
+}
