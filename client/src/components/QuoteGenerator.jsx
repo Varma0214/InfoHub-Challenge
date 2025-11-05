@@ -11,7 +11,7 @@ const QuoteGenerator = () => {
         setIsLoading(true);
         setError('');
         try {
-            const response = await axios.get('http://localhost:3001/api/quote');
+            const response = await axios.get('https://infohub-challenge-2-7bra.onrender.com/api/quote');
             setQuote(response.data.quote);
         } catch (err) {
             const message = err.response?.data?.error || 'Failed to fetch a motivational quote.';

@@ -21,7 +21,7 @@ const CurrencyConverter = () => {
         setConversion(null);
 
         try {
-            const response = await axios.get(`http://localhost:3001/api/currency?amount=${inrValue}`);
+            const response = await axios.get(`https://infohub-challenge-2-7bra.onrender.com/api/currency?amount=${inrValue}`);
             setConversion(response.data);
         } catch (err) {
             const message = err.response?.data?.error || 'Failed to connect to the currency service.';

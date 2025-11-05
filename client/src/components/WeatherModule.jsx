@@ -13,7 +13,7 @@ const WeatherModule = () => {
             setError('');
             try {
                 // CRA Proxy handles routing /api/weather to the backend
-                const response = await axios.get('http://localhost:3001/api/weather'); 
+                const response = await axios.get('https://infohub-challenge-2-7bra.onrender.com/api/weather'); 
                 setWeatherData(response.data);
             } catch (err) {
                 const message = err.response?.data?.error || 'Failed to connect to the weather service.';
